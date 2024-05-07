@@ -139,8 +139,11 @@ https://github.com/orbital-blockchain/cosmos-release/tree/main/binaries
 
 N.B. For local devnet, the following account mnemonic can be used since it will have tokens:
 
-```
+```console
 ./orbitald keys add <moniker> --keyring-backend os --recover
+```
+
+```
 trick jump eight arrive machine oyster joy latin loyal supreme inner wire gospel obscure slot nature tornado rack peasant disease gravity critic woman car
 ```
 
