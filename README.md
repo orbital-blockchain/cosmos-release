@@ -103,7 +103,7 @@ sudo ufw allow 1317/tcp
 sudo ufw enable
 ```
 
-### 12. Download and unzip Orbital chain binary and genesis file
+### 12. Download Orbital binary and config files
 
 ```console
 git clone https://github.com/orbital-blockchain/cosmos-release
@@ -146,22 +146,20 @@ trick jump eight arrive machine oyster joy latin loyal supreme inner wire gospel
 
 Store keyring passphrase and mnemonic somewhere safe.
 
-### 14a. Copy config files and genesis and validate
+### 14a. Move gensis and config files
 
-Move genesis file
+If running local devnet, copy whole folder:
+
+```console
+sudo mv cosmos-release/devnet/config ~/.orbital/config
+```
+
+If not running local devnet, just copy relevant files.
+
+Genesis file:
 
 ```console
 sudo mv cosmos-release/config/genesis.json ~/.orbital/config/genesis.json
-```
-
-Validate genesis:
-
-```console
-./orbitald genesis validate-genesis
-```
-
-```
-File at /home/validator/.orbital/config/genesis.json is a valid genesis file
 ```
 
 Lock genesis file:
@@ -170,7 +168,7 @@ Lock genesis file:
 chmod a-wx ~/.orbital/config/genesis.json
 ```
 
-Move Cosmos BFT config:
+Cosmos BFT config:
 
 ```console
 sudo mv cosmos-release/config/config.toml ~/.orbital/config/config.toml
