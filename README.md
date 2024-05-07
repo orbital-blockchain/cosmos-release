@@ -103,28 +103,22 @@ sudo ufw allow 1317/tcp
 sudo ufw enable
 ```
 
-### 12. Download and unzip Orbital chain binary
+### 12. Download and unzip Orbital chain binary and genesis file
 
 ```console
 git clone https://github.com/orbital-blockchain/cosmos-release
 ```
 
-Move the relevant binary for your OS
+Move the relevant binary for your OS:
 
 ```console
 sudo mv cosmos-release/binaries/orbital_linux_amd64.tar.gz .
 ```
 
-Unzip
+Unzip:
 
 ```console
 tar xzf orbital_linux_amd64.tar.gz
-```
-
-Remove repo:
-
-```
-rm -rf cosmos-release
 ```
 
 Binaries for other OS:
@@ -146,17 +140,18 @@ https://github.com/orbital-blockchain/cosmos-release/tree/main/binaries
 N.B. For local devnet, the following account mnemonic can be used since it will have tokens:
 
 ```
-trick jump eight arrive machine oyster joy latin loyal supreme inner wire gospel obscure slot nature torn
+./orbitald keys add <moniker> --keyring-backend os --recover
+trick jump eight arrive machine oyster joy latin loyal supreme inner wire gospel obscure slot nature tornado rack peasant disease gravity critic woman car
 ```
 
 Store keyring passphrase and mnemonic somewhere safe.
 
-### 14a. Copy config files and validate
+### 14a. Copy config files and genesis and validate
 
-Download and install Orbital genesis file:
+Move genesis file
 
 ```console
-curl -LJ <link to genesis> -o ~/.orbital/config/genesis.json
+sudo mv cosmos-release/config/genesis.json ~/.orbital/config/genesis.json
 ```
 
 Validate genesis:
@@ -175,27 +170,23 @@ Lock genesis file:
 chmod a-wx ~/.orbital/config/genesis.json
 ```
 
-Download and install Cosmos BFT config:
+Move Cosmos BFT config:
 
 ```console
-curl -LJ <link to config.toml> -o ~/.orbital/config/config.toml
+sudo mv cosmos-release/config/config.toml ~/.orbital/config/config.toml
 ```
 
-Download and install app file:
-
 ```console
-curl -LJ <link to app.toml> -o ~/.orbital/config/app.toml
+sudo mv cosmos-release/config/app.toml ~/.orbital/config/app.toml
+```
+
+Remove repo:
+
+```
+rm -rf cosmos-release
 ```
 
 ### 14b. Update config files
-
-```console
-ls ~/.orbital/config/
-```
-
-```
-app.toml  client.toml  config.toml  genesis.json  node_key.json  priv_validator_key.json
-```
 
 Update moniker in config.toml:
 
