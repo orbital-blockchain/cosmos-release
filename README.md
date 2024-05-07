@@ -143,9 +143,13 @@ https://github.com/orbital-blockchain/cosmos-release/tree/main/binaries
 ./orbitald keys add <moniker> --keyring-backend os
 ```
 
-Store keyring passphrase and mnemonic somewhere safe.
+N.B. For local devnet, the following account mnemonic can be used since it will have tokens:
 
-## Note: for local, dev chain, steps 14 and 15 can be omitted
+```
+trick jump eight arrive machine oyster joy latin loyal supreme inner wire gospel obscure slot nature torn
+```
+
+Store keyring passphrase and mnemonic somewhere safe.
 
 ### 14a. Copy config files and validate
 
