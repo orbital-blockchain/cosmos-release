@@ -6,6 +6,14 @@
 **The following instructions apply for Ubuntu 22.04 LTS 64-bit**  
 Throughout, replace `<moniker>` with the name of your node.
 
+### Once running, the blockchain can be interacted with using CLI commands
+
+For full instructions on usage:
+
+```
+./orbitald -h
+```
+
 ## Full node
 
 ### 1. Update the local package list and install any available upgrades
