@@ -124,7 +124,7 @@ sudo ufw enable
 ### 12. Download and unzip Orbital chain binary
 
 ```console
-wget https://github.com/orbital-blockchain/cosmos-release/raw/main/binaries/orbital_linux_amd64.tar.gz
+curl -O -L https://github.com/orbital-blockchain/cosmos-release/raw/main/binaries/orbital_linux_amd64.tar.gz
 ```
 
 ```console
