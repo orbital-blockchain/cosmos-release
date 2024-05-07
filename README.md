@@ -149,12 +149,12 @@ trick jump eight arrive machine oyster joy latin loyal supreme inner wire gospel
 
 Store keyring passphrase and mnemonic somewhere safe.
 
-### 14a. Move gensis and config files
+### 14a. Move genesis and config files
 
 If running local devnet, copy whole folder:
 
 ```console
-sudo mv cosmos-release/devnet/config ~/.orbital/config
+sudo cp -r cosmos-release/devnet/config ~/.orbital/config
 ```
 
 If not running local devnet, just copy relevant files.
@@ -162,7 +162,7 @@ If not running local devnet, just copy relevant files.
 Genesis file:
 
 ```console
-sudo mv cosmos-release/config/genesis.json ~/.orbital/config/genesis.json
+sudo cp cosmos-release/config/genesis.json ~/.orbital/config/genesis.json
 ```
 
 Lock genesis file:
@@ -174,11 +174,11 @@ chmod a-wx ~/.orbital/config/genesis.json
 Cosmos BFT config:
 
 ```console
-sudo mv cosmos-release/config/config.toml ~/.orbital/config/config.toml
+sudo cp cosmos-release/config/config.toml ~/.orbital/config/config.toml
 ```
 
 ```console
-sudo mv cosmos-release/config/app.toml ~/.orbital/config/app.toml
+sudo cp cosmos-release/config/app.toml ~/.orbital/config/app.toml
 ```
 
 Remove repo:
