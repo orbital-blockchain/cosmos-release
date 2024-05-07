@@ -349,7 +349,7 @@ journalctl -fu orbitald
 
 # Validator
 
-**After ensuring that the node has caught up and has a balance of morbital:**
+**After ensuring that the node has caught up and has a balance of mepic:**
 
 ### 1. Get validator address and pubkey
 
@@ -387,7 +387,7 @@ echo '{
 ```console
 ./orbitald tx staking create-validator ~/validator.json \
   --chain-id orbital \
-  --gas-prices 0morbital \
+  --gas-prices 0mepic \
   --from <moniker>
 ```
 
