@@ -6,24 +6,6 @@
 **The following instructions apply for Ubuntu 22.04 LTS 64-bit**  
 Throughout, replace `<moniker>` with the name of your node.
 
-## Local dev chain
-
-### 1. Install Ignite CLI
-
-```console
-curl https://get.ignite.com/cli! | bash
-```
-
-```
-Installed at /usr/local/bin/ignite
-```
-
-### 2. Stop at step 12 below and run
-
-```
-ignite chain serve
-```
-
 ## Full node
 
 ### 1. Update the local package list and install any available upgrades
@@ -162,6 +144,8 @@ https://github.com/orbital-blockchain/cosmos-release/tree/main/binaries
 ```
 
 Store keyring passphrase and mnemonic somewhere safe.
+
+## Note: for local, dev chain, steps 14 and 15 can be omitted
 
 ### 14a. Copy config files and validate
 
