@@ -151,7 +151,11 @@ Store keyring passphrase and mnemonic somewhere safe.
 
 ### 14a. Move genesis and config files
 
-If running local devnet, copy whole folder:
+If running local devnet, remove existing config folder and replace:
+
+```console
+sudo rm -rf ~/.orbital/config
+```
 
 ```console
 sudo cp -r cosmos-release/devnet/config ~/.orbital/config
