@@ -10,7 +10,7 @@ Throughout, replace `<moniker>` with the name of your node.
 
 For full instructions on usage:
 
-```
+```console
 ./orbitald -h
 ```
 
